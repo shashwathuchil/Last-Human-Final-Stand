@@ -10,7 +10,7 @@ const RUNNER_GLB := "res://assets/models/runner.glb"
 
 var speed: float = 6.0
 var target_x: float = 0.0
-var x_limit: float = 3.0
+var x_limit: float = 2.2
 var marching: bool = true
 var runners := []
 var _runner_glb: PackedScene

@@ -109,7 +109,7 @@ func _build_world() -> void:
 		var side: float = -1.0 if i % 2 == 0 else 1.0
 		var src: Node3D = meshes[i % meshes.size()]
 		var b: Node3D = src.duplicate()
-		b.position = Vector3(side * randf_range(9.0, 18.0), 0, -i * randf_range(9.0, 13.0) + 8.0)
+		b.position = Vector3(side * randf_range(11.0, 20.0), 0, -i * randf_range(9.0, 13.0) + 8.0)
 		b.rotation.y = randf() * TAU
 		add_child(b)
 	bsrc.queue_free()
@@ -180,7 +180,7 @@ func _fire_event(ev: Dictionary) -> void:
 			var g: Dictionary = ev["gate"]
 			var gate = Gate.new()
 			add_child(gate)
-			gate.position = Vector3(0, 0, squad.position.z - 34.0)
+			gate.position = Vector3(2.9, 0, squad.position.z - 34.0)
 			gate.setup(g["type"], int(g["value"]))
 			gate.applied.connect(_on_gate)
 			gates.append(gate)
